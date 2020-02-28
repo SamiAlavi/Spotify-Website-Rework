@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.modal.min.css"/>
+<link rel="icon" href="images/logo.png">
+
+<script type="text/javascript" src="js/fontawesome v5.js"></script>
+
+	<body class="animGradientSwap">
+		<!-- Vertical navbar -->
+		<div class="vertical-nav bg-dark" id="sidebar">
+
+		  <div class="py-4 px-3 mb-4 bg-dark al">
+		  	<!-- Toggle button -->
+	  		<button id="sidebarCollapse" type="button" class="btn btn-dark bg-dark rounded-pill mb-2 margLeft41"><i class="fa fa-bars mr-2" id="spinAnim"></i><small class="text-uppercase font-weight-bold disp">Toggle</small>
+	  		</button>
+		    <div class="align-items-center al margLeft45"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556074849/avatar-1_tcnd60.png" alt="..." width="65" class="rounded-circle img-thumbnail shadow-sm" style="margin-right: -10px;">
+		    </div>
+		    <div class="media-body disp" style="width: 100%">
+		        <h4 class=" text-light margLeft40">Decent Listener</h4>
+		        <p class="font-weight-light text-white mb-0 margLeft41">Time Killer</p>
+		      </div>
+		  </div>
+
+		  <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 disp al margLeft45">Main</p>
+
+		  <ul class="nav flex-column bg-dark mb-0 al margLeft38">
+		    <li class="nav-item hov" id="dispHome">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-home mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Home</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispTrending">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Trending</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispPlaylist">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Playlist</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispArtist">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-user mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Artist</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispAlbum">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-music mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Album</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispProfile">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Profile</span>
+		            </a>
+		    </li>
+		    <li class="nav-item hov" id="dispMaps">
+		      <a href="#" class="nav-link text-light font-italic">
+		                <i class="fa fa-map-o  mr-3 text-primary fa-fw"></i>
+		                <span class="disp">Maps</span>
+		            </a>
+		    </li>
+		  </ul>
+		</div>
+		<!-- End vertical navbar -->
+
+		<!-- Horizontal navbar -->
+		<div class="demo testbor bg-dark" style="height:13vh">
+			<a href="#" class="text-light font-italic" onclick="showhome()"  data-toggle="tooltip" title="Home">
+				<div class="float-left py-4 px-3 mb-5 icons rounded-pill">					
+		            <i class="fa fa-angle-left  mr-3 text-light fa-fw"></i>			        
+				</div>
+			</a>
+			<!--<a href="#" class="text-light font-italic">
+				<div class="float-left py-4 px-3 mb-5 icons rounded-pill">					
+		            <i class="fa fa-angle-right  mr-3 text-light fa-fw"></i>			        
+				</div>
+			</a>-->
+			<div class="float-left py-4 px-3 mb-5">
+				<div class="searchContainer">
+				  <i class="fa fa-search searchIcon"></i>
+				  <input class="searchBox" type="search" id="searchquery" name="squery" placeholder="Search Music...">
+				  <button class="searchButton" onclick="getresults()">Search</button>
+				</div>
+			</div>	
+			<a href="./homepage.html" class="text-light font-italic" data-toggle="tooltip" title="Sign out">
+				<div class="float-right py-4 px-3 mb-5 icons rounded-pill">					
+		            <i class="fa fa-sign-out  mr-3 text-light fa-fw"></i>			        
+				</div>
+			</a>			
+		</div>
+		<!-- End Horizontal navbar -->
+
+
+		<!-- Home -->
+		<div class="demo" id="home">
+
+			<div class="px-5 mb-4 testbor" >
+				<div>
+					<h1 class="text-light">Discover</h1>
+				</div>
+
+				<div id="ex1" class="modal" style="height: 10vh">
+				  <p>Url Not Available 
+				  <a href="#" rel="modal:close" class="float-right">Close</a></p>
+				</div>
+				<a href="#ex1" id="popup" rel="modal:open" style="display: none">Open Modal</a>
+			</div>
+
+			<div class="testbor">
+				<div class="float-left px-5 mb-2 testbor"><a href="#"><h6 class="text-light mTypes" id="genmood"  onclick="genres()">Genres & Mood</h6></a></div>
+				<div class="float-left px-5 mb-2 testbor"><a href="#"><h6 class="text-light mTypes" id="edipick" onclick="edpick()">Editor's Picks</h6></a></div>
+				<div class="float-left px-5 mb-2 testbor"><a href="#"><h6 class="text-light mTypes" id="newrel" onclick="newreleases()">New Releases</h6></a></div>
+				<div class="float-clear pr-5">.</div>
+			</div>
+			<br><br>			
+			<div class="testbor overflow" id="album-playlists">
+				<div class="ml-2 testbor" id="album-playlists2"></div>
+			</div>
+		</div>
+		<!-- End Home -->
+		
+		<!-- Trending -->
+		<div class="demo" id="trending">			
+		</div>
+		<!-- End Trending -->
+
+		<!-- Playlist -->
+		<div class="demo" id="playlist">			
+		</div>
+		<!-- End Playlist -->
+
+		<!-- Profile -->
+		<div class="demo" id="profile">			
+		</div>
+		<!-- End Profile -->
+
+		<!-- Maps -->
+		<div class="demo" id="maps">			
+		</div>
+		<!-- End Maps -->
+
+		<!-- Artist -->
+		<div class="demo" id="artist">
+		</div>
+		<!-- End Artist -->
+
+
+		<!-- Album -->
+		<div class="demo" id="album">
+		</div>
+		<!-- End Album -->
+
+		<!-- Search -->
+		<div class="demo" id="search">
+			<div class="testbor overflow" id="album-playlists3">
+				<div class="px-3 ml-2 testbor" id="results" data-toggle="modal" data-target="#myModal"></div>
+			</div>
+		</div>
+		<!-- End Search -->
+
+		<div id="musicPlayer" class="bg-dark">
+			<div class="musicHeight">
+				<div id="musicname">.</div>
+				<a href="#"><i class="far fa-play-circle text-primary" id="playbutton"></i></a>
+				<a href="#"><i class="far fa-stop-circle text-primary musicpadding" id="stopbutton"></i></a>
+				<div id="musicbar">
+					<div class="progress" style="height:5px;background: grey">
+					  <div class="progress-bar musicbaranim" role="progressbar" id="progressbar" aria-valuenow="0"
+					  aria-valuemin="0" aria-valuemax="100" style="width:0%;height:5px;">
+					  </div>
+					</div>
+				</div>
+				<span id="musictime">00:00</span>
+			</div>
+		</div>
+		<!-- End Search -->
+
+		<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/jquery.modal.min.js"></script>
+		<script type="text/javascript" src="js/dashboard.js"></script>
+	</body>
+</html>

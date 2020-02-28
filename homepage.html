@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/fontsizes.css">    
+    <link rel="stylesheet" type="text/css" href="css/letterspc.css">
+    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
+<!--===============================================================================================-->
+</head>
+
+<body>
+    <div class="w3-content" style="max-width:2000px; background-color: black">
+      <div class="w3-display-container">
+        <video autoplay muted loop>
+            <source src="videos/bg.mp4" type="video/mp4">
+        </video>
+        <div class="w3-display-topmiddle w3-text-white textCenter">
+          <p><img src="images/logo.png" width="10%"></p>   
+        </div>
+        <div class="w3-display-left w3-text-white capatalize font5vw textCenter" style="width:100%; margin-top: -80px">
+          <p>Welcome to the Era of <font class="brushScript">Music</font></p>   
+        </div>
+      </div>
+
+      <div class="w3-display-container">
+        <img src="images/harry_styles.jpg" style="width:100%">
+        <div class="w3-display-left w3-text-white" style="padding-left: 8%">
+          <div  data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-easing="ease-in-sine"
+                data-aos-mirror= "true">
+                <p class="capatalize letterSpc15 font3vw">The Latest Hits</p>
+                <div style="padding-left: 5%">            
+                    <a class="noTextDecor" href="https://www.spotify.com">
+                        <img width=5% src="images/spotify.png">
+                        <span class="font2vw letterSpc5 textCenter">Powered by Spotify ©</span>     
+                    </a> 
+                </div>
+            </div>   
+        </div>
+      </div>
+
+      <div class="w3-display-container">
+        <img src="images/alessia_cara.png" style="width:100%">
+            <div class="w3-display-right w3-text-white" style="margin: -1em 7em">
+                <p class="lineHeight capatalize letterSpc15 font4vw textCenter"
+                    data-aos="fade-left"
+                    data-aos-offset="70"
+                    data-aos-easing="ease-in-sine"
+                    data-aos-mirror= "true"
+                    style="color:black;">
+                    Search using<br>Maps
+                </p>    
+            </div>
+      </div>
+
+      <div class="w3-display-container">
+        <img src="images/imagine_dragons.jpg" style="width:100%;">
+        <div class="w3-display-middle w3-text-white textCenter" style="margin-top: 6vw; width: 90vw">
+            <div data-aos="flip-down"
+                data-aos-offset="0"
+                data-aos-easing="ease-in-sine"
+                data-aos-mirror= "true"
+                data-aos-duration= "1500">
+                <p class="capatalize letterSpc15 font4vw lineHeight">The Party<br>Starts Now!</p>
+                <a href="Login_v1/signin.html"><button class="myButton font2vw capatalize letterSpc10">Sign In</button></a><br><br>
+                <a href="signup.html"><button class="myButton font2vw capatalize letterSpc10">Sign Up</button></a>
+            </div>   
+        </div>
+      </div>   
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

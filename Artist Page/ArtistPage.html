@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html id="page1">
+
+	<head>
+		
+		<title>Web Engineering</title>
+		<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 		<link rel="stylesheet" href="./style.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 		
+
+	</head>
+
+	<body>
+
+		<div class="searchBox">
+
+            <input class="searchInput"type="text" name="" placeholder="What are you looking for?">
+            <button class="searchButton" href="#">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+
+        </div>
+
+        <div class="profile">
+        	<div style="border-radius: 5px; position: absolute; width: 160px; height: 170px; display: inline; align-items: left"><img id="ArtistImage" src="" alt="" style="border-radius: 5px" width="100%" height="100%"></div>
+        	<div style="padding-left: 165px"><font id="ArtistName" style="font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 100; line-height: 40px; color: #E4E4E4">Astrid S</font></div>
+        	<div style="padding-left: 165px"><font  id="Genres" style="font-size: 12px; font-family: Arial; color: #ADADAD">Electro, New Pop, Vibes</font></div>
+        	<div style="padding-left: 165px; padding-top: 10px;"><font style="font-size: 14px; font-family: Arial; color: #CBCDCD">Known professionally as Astrid S or simply Astrid, is a Norwegian singer and songwriter. She came fifth in the Norwegian version of the reality television show Pop idol, aired on TV 2 in 2013. She is currently trending in Norway and...</font></div>
+        	<div class="playButtons">
+        		<div onclick="playSong('0')" class="myButton" style="margin-left: 10px">PLAY ALL</div>
+        		<div onclick="mix()" class="myButton" style="margin-left: 180px">MIX</div>
+        	</div>
+        </div>
+
+    	<div style="background-color: #6F6F6F; width: 70%; height: 2px; position: absolute; top: 350px; left: 169px;"></div>
+
+        <div id="everything" style="position: absolute; top: 410px; left: 169px; width: 75%; height: 330px">
+        	<font style="font-size: 30px; font-weight: 100; color: #6F6F6F">Top Tracks<br/><br/></font>
+        	<div id="TopTracksDiv" class="topTracks">
+        		
+        	</div>
+        </div>
+
+         <div id="singlesDiv" style="position: absolute; top: 920px; left: 169px; width: 80%; height: 300px">
+         	<font style="font-size: 30px; font-weight: 100; color: #6F6F6F">Related Artists<br/><br/></font>
+         	<div style="position: absolute; top: 50px; width: 100%; height: 170px">
+	     		<div id="fansAlsoLikeDiv" class="fansAlsoLike">
+
+	     			<table width="100%">
+	     				<tr>
+	     					<td><div class="container"><img id="relArt0" src="" alt="" class="artistImage">
+	     						<div id="overlay0" class="overlay">
+	     							<div id="artName0" class="text">Hello world!</div>
+	     						</div>
+	     						</div>
+	     					</td>
+	     					<td><div class="container"><img id="relArt1" src="" alt="" class="artistImage">
+	     						<div id="overlay1" class="overlay">
+	     							<div id="artName1" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt2" src="" alt="" class="artistImage">
+	     						<div id="overlay2" class="overlay">
+	     							<div id="artName2" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt3" src="" alt="" class="artistImage">
+	     						<div id="overlay3" class="overlay">
+	     							<div id="artName3" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt4" src="" alt="" class="artistImage">
+	     						<div id="overlay4" class="overlay">
+	     							<div id="artName4" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     				</tr>
+	     				<tr>
+	     					<td><div class="container"><img id="relArt5" src="" alt="" class="artistImage">
+	     						<div id="overlay5" class="overlay">
+	     							<div id="artName5" class="text">Hello world!</div>
+	     						</div>
+	     						</div>
+	     					</td>
+	     					<td><div class="container"><img id="relArt6" src="" alt="" class="artistImage">
+	     						<div id="overlay6" class="overlay">
+	     							<div id="artName6" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt7" src="" alt="" class="artistImage">
+	     						<div id="overlay7" class="overlay">
+	     							<div id="artName7" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt8" src="" alt="" class="artistImage">
+	     						<div id="overlay8" class="overlay">
+	     							<div id="artName8" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt9" src="" alt="" class="artistImage">
+	     						<div id="overlay9" class="overlay">
+	     							<div id="artName9" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     				</tr>
+	     				<tr>
+	     					<td><div class="container"><img id="relArt10" src="" alt="" class="artistImage">
+	     						<div id="overlay10" class="overlay">
+	     							<div id="artName10" class="text">Hello world!</div>
+	     						</div>
+	     						</div>
+	     					</td>
+	     					<td><div class="container"><img id="relArt11" src="" alt="" class="artistImage">
+	     						<div id="overlay11" class="overlay">
+	     							<div id="artName11" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt12" src="" alt="" class="artistImage">
+	     						<div id="overlay12" class="overlay">
+	     							<div id="artName12" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt13" src="" alt="" class="artistImage">
+	     						<div id="overlay13" class="overlay">
+	     							<div id="artName13" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     					<td><div class="container"><img id="relArt14" src="" alt="" class="artistImage">
+	     						<div id="overlay14" class="overlay">
+	     							<div id="artName14" class="text">Hello world!</div>
+	     						</div>
+	     						</div></td>
+	     				</tr>
+	     			</table>
+
+	       		</div>
+         	</div>
+         </div>        
+         <script type="text/javascript" src="scriptForArtistPage.js"></script>
+	</body>
+
+</html>

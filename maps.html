@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My map</title>
+        <link rel='stylesheet' type='text/css' href='css/map.css'/>
+        <script src='js/tomtom.min.js'></script>
+    </head>
+    <body>
+        <div id='map' style='height: 87vh;width:100%'></div>
+        <script>
+            tomtom.setProductInfo('ok', '123');
+    	    var map = tomtom.L.map('map', {
+    		    key: '8W6ttpYQf0GQ5APZLKfqFLW8zizHrOc0'
+    	    });
+            map.on('click', function(e) {
+                var latlng = e.latlng;
+                console.log(latlng);
+                //tomtom.L.popup().setLatLng(e.latlng).setContent(e.latlng.toString()).openOn(map);
+                var url = "https://api.tomtom.com/search/2/reverseGeocode/"+latlng.lat+"%2C"+latlng.lng+".json?&key=8W6ttpYQf0GQ5APZLKfqFLW8zizHrOc0"
+                fetch(url, {
+                  method: "GET"
+                })
+                .then(response => response.json())
+                .then( function(data){
+                    //console.log(data);
+                    console.log(data.addresses[0].address.countryCode);
+                    localStorage.setItem('country', data.addresses[0].address.countryCode);
+                    }
+                );
+            });
+            
+        </script>
+    </body>
+</html>

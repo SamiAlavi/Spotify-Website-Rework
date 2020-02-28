@@ -1,0 +1,429 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+*{
+  outline: none;
+}
+
+body {
+  background: #599fd9;
+  background: linear-gradient(to right, #599fd9, #c2e59c);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.testbor{
+  //border: 1px solid white;
+}
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 90vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.float-clear{
+  clear: all;
+}
+
+/*
+*
+* Animation
+*
+*/
+.animGradientSwap{
+  background: radial-gradient(#bb01e4, #190041, black);
+  background-size: 300% 300%;
+  animation: gradientSwap 10s ease infinite;
+}
+
+@keyframes gradientSwap {
+    0%{background-position:100% 100%}
+    50%{background-position:0% 13%}
+    100%{background-position:100% 100%}
+}
+/*
+*
+* Toggle
+*
+*/
+
+.demo{
+  margin-left: 17rem;
+  transition: all 0.8s ease;
+  background-color: rgba(41, 43, 44, 0.7);
+  z-index: 1;
+  position: fixed;
+  width: calc(100vw - 17rem);
+  height: 77.1vh;
+}
+.demoactive{
+  margin-left: 5rem;
+  width: calc(100vw - 5rem);
+  transition: all 0.8s ease;
+}
+
+.disp{
+  display:inline-block;
+}
+.dispnone{
+  display:none;
+}
+.hov:hover{background-color: #292b2c;}
+
+.al{  
+  text-align: left;
+}
+.alr{  
+  text-align: right;
+}
+#sidebar, #sidebar.active{
+  transition: all 0.8s ease;
+}
+
+#sidebar.active {
+  margin-left: -12rem;
+}
+
+.spin{
+  animation: spin 2s ease;
+}
+
+.spin-reverse{
+  animation: spin-reverse 2s ease;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*
+*
+* Responsive
+*
+*/
+@media (max-width: 768px) {
+  .margLeft38{
+    margin-left: 38%;
+  }
+  .margLeft40{
+    margin-left: 40%;
+  }
+  .margLeft41{
+    margin-left: 41%;
+  }
+  .margLeft45{
+    margin-left: 45%;
+  }
+  .hov{
+    width: 100%;
+  }
+  .hovactive{
+    width: 45%;
+  }
+  .disp{
+    display:none;
+  }
+  .dispnone{
+    display:inline-block;
+  }
+  .al{  
+    text-align: right;
+  }
+  .alr{  
+    text-align: left;
+  }
+  .demo{
+    margin-left: 5rem;
+    width: calc(100vw - 5rem);
+  }
+  .demoactive{
+    margin-left: 100%;
+    width: 0px;
+  }
+  #sidebar {
+    margin-left: -12rem;
+  }
+  #sidebar.active {
+    width: 100%;
+    margin-left: 0rem;
+    z-index: 2;
+  }
+}
+
+/*
+*
+* Nav bar
+*
+*/
+.separator {
+  margin: 3rem 0;
+  border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+.text-gray {
+  color: white;
+}
+
+/*
+*
+* Row 1
+*
+*/
+.icons{
+  transition: 0.4s ease;  
+  margin-top: 0.5rem;
+}
+
+.icons:hover{
+  background: black;
+  transition: 0.4s ease;
+}
+.searchContainer {
+  display: inline-flex;
+  flex: 1 1 300px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.searchIcon {
+  padding: 0.5rem;
+  background-color: #e3e3e3;
+  padding-top: 0.7rem;
+}
+.searchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  flex: 1;
+  transition: 0.4s ease;
+}
+.searchBox:hover{
+  background: #e3e3e3;
+  transition: 0.4s ease;
+}
+.searchButton {
+  background: #538AC5;
+  border: 0;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0;
+  transition: 0.4s ease;
+}
+.searchButton:hover{
+  background: blue;  
+  transition: 0.4s ease;
+}
+
+/*
+*
+* Row 3
+*
+*/
+.mTypes{
+  display: inline-block;
+  margin-bottom: -3px;
+}
+.mTypes:hover{
+  border-bottom: 3px solid black;
+  transition: all 0.5s ease;
+}
+
+/*
+*
+* Rest
+*
+*/
+#home{
+  display: inline-block;
+  margin-top:13vh;  
+}
+#trending, #playlist, #profile, #search, #maps, #artist, #album{
+  display: none;
+  margin-top:13vh;
+}
+#search{
+  height: 87vh;
+}
+.overflow{
+  overflow-y: scroll;
+}
+#album-playlists{
+  height: 70%;
+}
+#album-playlists2{
+  width: 98%;
+}
+#album-playlists3{
+  height: 85%;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  height: 195px; /* [1.1] Set it as per your need */
+  width: 195px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  position: relative;
+}
+.img-hover-zoom-search {
+  height: 64px; /* [1.1] Set it as per your need */
+  width: 64px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  position: relative;
+}
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .8s ease;
+}
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
+}
+
+
+#album-playlists2:hover>div {
+    opacity: 0.2;
+}
+#album-playlists2>div:hover {
+    opacity: 1;
+}
+
+.img-hover-zoom img{
+  width: 100%;
+}
+.img_description_layer, .img_description_layer2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(69, 68, 68, 0.7);
+  color: #fff;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+.img_description_layer2 {
+  background: rgba(255, 255, 255, 0.3);
+}
+.img-hover-zoom:hover .img_description_layer, .img-hover-zoom:hover .img_description_layer2 {
+  visibility: visible;
+}
+.img_description, .img_description2 {
+  transition: .2s ease;
+  text-align: center;
+  pointer-events: none;
+  transform: translateY(10em);
+}
+.img_description2 {
+  transform: translateY(7em);
+}
+.img-hover-zoom:hover .img_description {
+  transform: translateY(0);
+}
+.img-hover-zoom:hover .img_description2 {
+  transform: translateY(3em);
+}
+
+/* Music Player Stuff */
+#musicPlayer {
+  margin-top: 90vh;
+  padding-top:1vh;
+  padding-left: 10%;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+
+}
+.musicHeight {
+  height: 7vh;
+}
+#musicname {
+  color: white;
+  text-align: center;  
+  margin-bottom: -1vh;
+}
+#playbutton, #stopbutton{
+  font-size: 2.5vw;
+  float: left;
+}
+.musicpadding {
+  padding-left: 2%;
+  padding-right: 3.4%;
+}
+#musicbar {
+  padding-top: 2.4vh;
+  width: 80%;
+  float: left;
+  padding-right: 1%;
+}
+#musictime {
+  color: white;
+  float: left;
+  padding-top: 0.5vh;
+}
+.musicbaranim{
+  background: linear-gradient(270deg, #29e161, #29e161, #29d7e1, #2986e1, #6738c6); 
+  background-size: 200% 200%;
+  animation: musicanim 5s ease infinite;
+}
+@keyframes musicanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+#progressbar{
+  transition: 0.5s linear;
+}
+
+html {
+    overflow: auto;
+}
+/* Scrollbar changer */
+::-webkit-scrollbar {
+    width: 12px;
+    margin-right: 100px;
+} 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-right: 1%;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    margin-right: 1%;
+}

@@ -1,0 +1,206 @@
+*{
+	font-family: 'Bitter', serif;
+}
+
+body{
+	margin: 0;
+	overflow: hidden;
+}
+/* Scrollbar changer */
+::-webkit-scrollbar {
+    width: 8px;
+} 
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+}
+/*******************************************************homepage.html*******************************************************/
+
+.noTextDecor{	
+	text-decoration: none;
+	color: white;
+}
+
+.textCenter{	
+	text-align: center;
+}
+
+.brushScript{
+	font-family: 'Brush Script MT';
+	font-size:90px;
+}
+
+.capatalize{
+	text-transform: uppercase;
+}
+
+.lineHeight{
+	line-height: 2em;
+}
+
+.myButton {
+	width: 30vw;
+	height: 3.8vw;
+	background-color: #DB247A;
+	border-radius:25px;
+	font-weight: bold;
+	border: 0;
+	color:#ffffff;
+	transition: 0.3s;
+}
+.myButton:hover {
+	background-color: #7d1445;	
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+/*******************************************************signup.html and signin.html*****************************************************/
+
+.width26{
+	width: 26%;
+}
+.width42{
+	width: 42%;
+}
+.width58{
+	width: 58%;
+}
+.width90{
+	width: 90%;
+}
+.width100{
+	width: 100%;
+}
+
+.height2em{
+	height: 2em;
+}
+
+.labels{
+	
+}
+.inputs{
+	background-color: #F2F2F2;
+	font-size: 1.1em;
+}
+.pwdShow{
+	float: right;
+	margin-left: -25px;
+	margin-top: -32px;
+	position: relative;
+	z-index: 2;
+	background-color: transparent;
+	border: none;
+	font-weight: bold;
+}
+
+.margin1percLeft{
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: left;
+}
+.margin1percRight{
+	margin-right: 5%;
+	text-align: left;
+}
+
+.floatLeft{
+	float: left;
+}
+.floatRight{
+	float: right;
+}
+.clearFloats{
+	clear: all;
+}
+
+.animGradientSwap{
+	background: radial-gradient(#bb01e4, #190041, black);
+	background-size: 300% 300%;
+	animation: gradientSwap 10s ease infinite;
+}
+
+@keyframes gradientSwap {
+    0%{background-position:0% 88%}
+    50%{background-position:100% 13%}
+    100%{background-position:0% 88%}
+}
+
+.btnLogin{
+	background-color: white;
+	border: none;
+	margin:1px 10px 0px 10px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 20px;
+	font-size: 1.01em;
+	border: 1px solid #e3e3e3;
+	transition: 0.4s;
+}
+.btnLogin:hover{
+	border: 1px solid black;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+input[type="date"], input[type="text"], input[type="Password"], input[type="tel"]{
+	border: none;
+	padding: 2px;
+	border-radius: 8px;
+}
+
+input[type="date"]:focus, input[type="text"]:focus, input[type="Password"]:focus, input[type="tel"]:focus{
+	border-bottom: 3px solid #4b0082;
+	transition: 0.4s;
+}
+input[type="date"]:hover, input[type="text"]:hover, input[type="Password"]:hover, input[type="tel"]:hover{
+	border: 1px solid #4b0082;
+	background-color: #e3e3e3;
+	transition: 0.4s;
+}
+
+input[type="date"]{
+	background:#F2F2F2 url(../images/calendar_2.png)  97% 50% no-repeat ;
+	color: black;
+}
+input[type="date"]::-webkit-inner-spin-button { display: none; }
+input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; }
+input[type="date"]::-webkit-datetime-edit {}
+input[type="date"]::-webkit-clear-button { transform: translateX(-10px);}
+
+input[type="submit"]{
+	height: 2.5em;
+	width: 40%;
+	margin: 10px;
+	border-radius: 25px;
+	color: #e3e3e3;
+	border: none;
+	font-size: 1.01em;
+	font-weight: bold;
+	transition: 0.4s;
+	box-shadow: 0px 0px	 5px 5px #d4d4d4;
+}
+input[type="submit"]:hover{
+	background-color: purple;
+	box-shadow: 0px 0px 70px 25px #494848;
+}
+
+.noTextDec{	
+	text-decoration: none;
+	color: grey;
+}
+.noTextDec:hover{
+	border-bottom: 2px solid yellow;
+	margin-bottom: -2px;
+	color: black;
+}

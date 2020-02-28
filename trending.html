@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/trending.css">
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/fontawesome v5.js"></script>
+  <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+
+  <video id="bgVideo">
+  </video>
+
+  <div class="music-header">       
+    <section class="blues-music">
+      <div>
+      <h1 style="font-size:70px">WHAT'S #TRENDING</h1>
+      </div>        
+    </section>
+  </div>
+   
+       
+  <ul  class="music-list" id="kjh">
+  </ul>
+
+  <script type="text/javascript">
+    var token=localStorage.getItem('userAccessToken');
+    var songDetails= new Object();
+
+    function playsong(url,name){
+      songDetails.name = name;
+      songDetails.url = url;
+      var myJSON = JSON.stringify(songDetails);
+      localStorage.setItem('songDetails',myJSON);
+    }
+    function gettrend(){            
+            //Editor's Pick
+            fetch("https://api.spotify.com/v1/playlists/1pMB5VwjH6fzf8ldHch1IG", {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`     
+              }
+            })
+            .then(response => response.json())
+            .then( function(data){
+              console.log(data);
+              var text="";
+              var list = data.tracks.items;
+              for (i = 0; i < list.length; i++) {
+                  text +="<li><p style='text-align:center'>("+[i]+")</p><p id='music' style='text-align:center'>"+list[i].track.name+"</p><p style='text-align:center'>"+list[i].track.artists[0].name+"</p><p style='text-align:center'><button style='float: right;'' class='button' onclick='"+"playsong(&quot;"+list[i].track.preview_url+"&quot;,&quot;"+list[i].track.name+"&quot;)'>STREAM NOW</button></p></li>";
+              }
+              
+              document.getElementById("kjh").innerHTML = text;
+            }
+            );
+          }
+    gettrend();
+  </script>
+
+</body>
+</html>

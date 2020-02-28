@@ -1,0 +1,343 @@
+body {
+    background-image: linear-gradient(to right , #090909, #1B1B1B, #323232, #474646, #474646, #323232, #1B1B1B, #090909);
+}
+
+.searchBox {
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    transform:  translate(-50%,50%);
+    background: ##E4E7E7;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: #929494;
+}
+
+p { font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+.profile{
+    width: 70%;
+    height: 180px;
+    background-color: transparent;
+    position: absolute;
+    top: 150px;
+    left: 170px;    
+}
+
+.gradientBorder{
+    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00)) 21 30 30 21 repeat repeat;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.artistImage{
+    width: 150px;
+    height: 135px;
+    display: block;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.overlay{
+    border-radius: 50%;
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 135px;
+    width: 150px;
+    opacity: 0;
+    transition: .5s ease;
+    cursor: pointer;
+    background-color: #181818;
+}
+
+.container:hover .overlay{
+    opacity: 0.8;
+}
+
+.text{
+    color: white;
+    font-family: 'Aclonica';
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.fansAlsoLike{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    border-color: #504F4F;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    top: 10px;
+    margin-bottom: 50px;
+}
+
+td{
+    width: 200px;
+    height: 160px;
+}
+
+.img{
+    border-radius: 5px;
+    position: absolute;
+    width: 160px;
+    height: 170px;
+    display: inline;
+    align-items: left;
+}
+
+.img:hover:before {
+    content: '';
+    display: block;
+    background-image: url("play.png");
+    width: 150px; /* image width */
+    height: 170px; /* image height */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.img:click {
+    z-index: 2;
+    background-image: url("play.png");
+}
+
+.playButtons{
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    margin-top: 12px;
+    margin-left: 165px;
+}
+
+.myButton {
+    background-color:#ff5bb0;
+    border-radius:28px;
+    border:1px solid #ee1eb5;
+    width: 90px;
+    position: absolute;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 4px;
+    text-align: center;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #c70067;
+}
+.myButton:hover {
+    background-color: #323232;
+}
+.myButton:active {
+    position:absolute;
+    top:1px;
+}
+
+.favouriteButton{
+    background-color: transparent;
+    border-radius:28px;
+    border:1px solid #ee1eb5;
+    width: 90px;
+    position: absolute;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-top: 4px;
+    text-align: center;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #c70067;
+}
+
+.favouriteButton:hover {
+    background-color: #323232;
+}
+.favouriteButton:active {
+    position:absolute;
+    top:1px;
+}
+
+.optionBar{
+    background-color: transparent;
+    position: absolute;
+    width: 70%;
+    height: 50px;
+    top: 355px;
+    left: 169px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #5F5E5E;
+    align-items: left;
+}
+
+.option{
+    position: relative;
+    width: 50%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.topTracks{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+
+#TopTracksDiv {
+
+  &::-webkit-scrollbar {
+   width: 0.5em;
+   height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background-color: rgba(255,255,255,.1);
+   border-radius: 3px;
+
+   &:hover {
+    background: rgba(255,255,255,.2);
+   }
+  }
+}
+
+
+.Row{
+    position: relative;
+    width: 100%;
+    height: 16.2%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #5F5E5E;
+    float: left;
+    cursor: default;
+}
+
+.Row:hover{
+    background-color: #4E4D4D;
+}
+
+.Row:active{
+    background-color: black;
+}
+
+.srNo{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+}
+
+.song{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 143px;
+    display: inline-block;
+}
+
+.artist{
+    position: absolute;
+    width: 16%;
+    height: 100%;
+    left: 334px;
+    display: inline-block;
+}
+
+.dailyPlays{
+    position: absolute;
+    width: 22%;
+    height: 100%; 
+    left: 487px;
+    display: inline-block;
+}
+
+.time{
+    position: absolute;
+    width: 11%;
+    height: 100%; 
+    left: 697px;
+    display: inline-block;
+}
+
+.shareOpt{
+    position: absolute;
+    width: 15%;
+    height: 100%; 
+    left: 802px;
+    display: inline-block;
+}
+
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+    }
+}

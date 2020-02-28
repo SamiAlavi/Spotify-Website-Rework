@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+html,body {
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  opacity: 0.9;
+  flex-direction: column;  
+  background-color: #4e4e4e;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-size: 0.9em;
+  
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../videos/music-fans-concert.gif') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+main {
+  flex: 1 0 auto;
+  display:flex;
+}
+
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.music-header {
+  flex: 0 0 10vh;
+  display: flex;  
+  padding: 10px;
+  opacity: 0.9;
+  background-color: #170820  ;
+}
+
+
+.music-list {
+   flex: 1 0 10vh;
+   list-style-type: none;
+   overflow-y: scroll;
+   padding: 0px;
+   opacity: 0.9;
+   margin-bottom: 11vh;
+
+}
+
+li {
+  display:flex;
+  border-radius: 25px;
+  padding: 0 20px;
+  min-height:20px;
+  font-size:20px;
+}
+
+li p {
+  flex: 0 0 25%;
+}
+
+li span.blue-cloud { 
+  border: 1px solid black;
+  font-size: 25px;
+  width: 70%;
+  padding: 3px;
+  border-radius: 20px;
+}
+  
+li:nth-child(2n) {
+  background-color: #867492;
+  color: white;
+}
+li:nth-child(2n+1) {
+  background-color: #f2f2f2;
+  color: #000;
+}
+li:nth-child(1) {
+  background-color: #0060E1;
+  color: white;
+}
+
+.blues-music{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  color: #fff;
+  padding-left: 30px;
+}
+
+
+.blues-music div:nth-child(1){
+  margin-bottom: auto;
+}
+
+.blues-music div:nth-child(2){
+  margin-top: 0;
+
+}
+
+.blues-music div:nth-child(2) i.fa{
+  font-size: 0.9em;
+  padding:0 0.7em;
+  font-weight: 300;
+}
+
+.blues-music div:nth-child(1) p:first-child{
+  font-size: 1.8em;
+  margin: 0 0 10px;
+}
+
+.blues-music div:nth-child(1) p:not(:first-child){
+  font-size: 0.9em;
+  margin: 2px 0;
+}
+
+
+
+img{
+  height:100px;
+  width:100px;
+  border-radius: 10px;
+}
+
+ul li:hover {
+  color: white;
+  outline-color: white;
+
+  background: #4F236D;
+}
+
+.button {
+  background-color: #52353D;
+  border: 2px solid #FEBCCE;
+  border-radius: 25px;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #8B24E7; /* Green */
+  border: 2px solid #52353D ;
+}
