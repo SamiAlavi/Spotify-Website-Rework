@@ -1,6 +1,12 @@
 # Spotify-Website-Rework
 Spotify Website Rework (Semester 5 - CS344 Web Engineering)
 
+Webstite: https://samialavi.github.io/Spotify-Website-Rework
+
+Contributors:
+   - [@Ali Taimoor](https://github.com/AliTaimoor)
+
+
 https://developer.spotify.com/web-api/authorization-guide/
 
 ## Installation
