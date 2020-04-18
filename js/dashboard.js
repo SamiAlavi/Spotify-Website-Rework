@@ -638,14 +638,13 @@ function edpick(){
         if (userAccessToken=='') data=JSON.parse(edpick_text);
 		console.log(data);
 		var text="";
-		var nations=['0NCspsyf0OS4BsPgGhkQXM','2X5BPknxexv0e7DdDKUj0C','0OfG84TeEu3fgv7d6JhTlP','4GOnSXcPfwj1rWKcEIc3uu','5VL3IwYGDjiPCCg6uwscJs','2vwdWbVa2ozcezCUxejnU0','6yqq7LKJPaScoZ4L0Q4E7J']
+		var nations=['0NCspsyf0OS4BsPgGhkQXM','2X5BPknxexv0e7DdDKUj0C','0OfG84TeEu3fgv7d6JhTlP','4GOnSXcPfwj1rWKcEIc3uu','5VL3IwYGDjiPCCg6uwscJs','2vwdWbVa2ozcezCUxejnU0']
 		var covers=['https://pl.scdn.co/images/pl/default/c81f89b8f98c75ae1afa2283203e3901e497528c',
 					'https://pl.scdn.co/images/pl/default/bf3ae51f7fd61c72a72d233f50e472a2f530f79c',
 					'https://pl.scdn.co/images/pl/default/6a2bc8f9537e8f8948ade3767e51cc67939a6133',
 					'https://pl.scdn.co/images/pl/default/e8352f01fd5abb84a611f4dac1da91ee7eb9f01d',
 					'https://pl.scdn.co/images/pl/default/184d797a8347a180cea3ef9d997a6241375da361',
-					'https://pl.scdn.co/images/pl/default/41911b96f2d6cc29b65b38253a40459b4937109f',
-					'https://pl.scdn.co/images/pl/default/b3cd2a94d49631ca9625bc82deb1d175eb3f6b1a']
+					'https://pl.scdn.co/images/pl/default/41911b96f2d6cc29b65b38253a40459b4937109f']
 		var list = data.playlists.items;
 		for (i = 0; i < list.length; i++) {
 	  		text += "<div class='img-hover-zoom float-left mr-2 mb-3' onclick='"+"openplaylist(&quot;"+list[i].href+"&quot;)'><img src='"+ list[i].images[0].url + "'><div class='img_description_layer2'><p class='img_description2'></p></div></div>";

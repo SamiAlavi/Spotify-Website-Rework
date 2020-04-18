@@ -22,7 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/w3.css">
 <!--===============================================================================================-->
 </head>
-
 <body>	
 	<div class="animGradientSwap limiter">
 		<div class="container-login100 w3-animate-zoom">
@@ -33,11 +32,11 @@
 
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Login
+						Continue without Login
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Email is required">
-						<input class="input100" id="email" type="text" name="email" placeholder="Email">
+						<input class="input100" id="email" type="text" name="email" placeholder="Email" disabled>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user" aria-hidden="true"></i>
@@ -45,7 +44,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" id="pwd" type="password" name="pass" placeholder="Password">
+						<input class="input100" id="pwd" type="password" name="pass" placeholder="Password" disabled>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -55,8 +54,8 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<input type="button" class="btn btn-primary btnSeccion login100-form-btn" id="btnSeccion3" value="Login" onclick="signIn()"/>
-													
+							<input type="button" class="login100-form-btn" id="btnSeccion3" value="Continue" onclick="signIn()"/>
+												
 						</div>
 					</div>
 
@@ -80,12 +79,6 @@
 <!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
-
-	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
-	<!-- Firebase Database -->
-	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
@@ -96,7 +89,6 @@
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
 	<script src="js/signIn.js"></script>
 
 </body>

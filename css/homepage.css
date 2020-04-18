@@ -62,6 +62,12 @@ body{
 	top:1px;
 }
 
+button:disabled {
+  background: #dddddd;
+}
+button:disabled:hover {
+  background: #dddddd;
+}
 
 /*******************************************************signup.html and signin.html*****************************************************/
 
