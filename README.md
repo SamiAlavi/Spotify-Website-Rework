@@ -5,6 +5,7 @@ Webstite: https://samialavi.github.io/Spotify-Website-Rework
 
 Contributors:
    - [@Ali Taimoor](https://github.com/AliTaimoor)
+   - [@Iqra Shahid](https://github.com/IqraShahid9)
 
 
 https://developer.spotify.com/web-api/authorization-guide/
